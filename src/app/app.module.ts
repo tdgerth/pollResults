@@ -4,13 +4,40 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { ChartsModule } from 'ng2-charts';
+import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
+import { MyDoughnutChartComponent } from './my-doughnut-chart/my-doughnut-chart.component';
+import { MyRadarChartComponent } from './my-radar-chart/my-radar-chart.component';
+import { MyPieChartComponent } from './my-pie-chart/my-pie-chart.component';
+
+
+// Initialize Firebase
+var firebaseConfig = {
+  apiKey: "AIzaSyCat0mcZbCnGMGLisXzfqabzsvQItcUx30",
+  authDomain: "crowdpoll-bdea7.firebaseapp.com",
+  databaseURL: "https://crowdpoll-bdea7.firebaseio.com",
+  projectId: "crowdpoll-bdea7",
+  storageBucket: "crowdpoll-bdea7.appspot.com",
+  messagingSenderId: "922980354182"
+};
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyBarChartComponent,
+    MyDoughnutChartComponent,
+    MyRadarChartComponent,
+    MyPieChartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
