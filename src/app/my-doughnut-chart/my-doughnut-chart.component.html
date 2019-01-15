@@ -1,7 +1,10 @@
-<div style="display: block">
+<div style="display: block; width: 90%; margin: auto;">
   <canvas baseChart
     [data]="doughnutChartData"
     [labels]="doughnutChartLabels"
-    [chartType]="doughnutChartType">
+    [chartType]="doughnutChartType"
+    [options]="doughnutChartOptions"
+    [legend]="doughnutChartLegend"
+    [colors]="chartColors">
   </canvas>
 </div>

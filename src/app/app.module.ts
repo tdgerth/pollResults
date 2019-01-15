@@ -13,6 +13,9 @@ import { MyDoughnutChartComponent } from './my-doughnut-chart/my-doughnut-chart.
 import { MyRadarChartComponent } from './my-radar-chart/my-radar-chart.component';
 import { MyPieChartComponent } from './my-pie-chart/my-pie-chart.component';
 
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { MyWeightedChartComponent } from './my-weighted-chart/my-weighted-chart.component';
+
 
 // Initialize Firebase
 var firebaseConfig = {
@@ -30,7 +33,8 @@ var firebaseConfig = {
     MyBarChartComponent,
     MyDoughnutChartComponent,
     MyRadarChartComponent,
-    MyPieChartComponent
+    MyPieChartComponent,
+    MyWeightedChartComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,7 @@ var firebaseConfig = {
     AngularFireDatabaseModule,
     ChartsModule,
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

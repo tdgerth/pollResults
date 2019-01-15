@@ -1,11 +1,13 @@
+<script src="node_modules/chart.js/src/chart.js"></script>
 <div>
-  <div style="display: block">
+  <div style="display: block; width: 90%; margin: auto;" >
     <canvas baseChart
       [datasets]="barChartData"
       [labels]="barChartLabels"
       [options]="barChartOptions"
       [legend]="barChartLegend"
-      [chartType]="barChartType">
+      [chartType]="barChartType"
+      [colors]="barChartColors">
     </canvas>
   </div>
 </div>
